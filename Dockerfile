@@ -7,4 +7,4 @@ RUN yes | certmgr -ssl -m https://go.microsoft.com \
     yes | certmgr -ssl -m https://www.myget.org/F/aspnetvnext
 RUN ["dnu", "restore"]
 EXPOSE 80
-ENTRYPOINT nohup /opt/dnx/runtimes/default/bin/dnx /app kestrel &
+ENTRYPOINT nohup /opt/dnx/runtimes/dnx-mono.1.0.0-beta4/bin/dnx /app kestrel &
