@@ -8,4 +8,4 @@ WORKDIR /app
 RUN ["dnu", "restore"]
 EXPOSE 80
 #ENTRYPOINT ["dnx","/app","kestrel"]
-sleep 10000000 | dnx . kestrel
+ENTRYPOINT sleep 10000000 | dnx . kestrel
