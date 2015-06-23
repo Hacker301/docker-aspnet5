@@ -1,4 +1,4 @@
-FROM microsoft/aspnet:1.0.0-beta4
+FROM microsoft/aspnet:latest
 ADD ./src /app
 WORKDIR /app
 #RUN yes | certmgr -ssl -m https://go.microsoft.com \
@@ -7,4 +7,4 @@ WORKDIR /app
 #    yes | certmgr -ssl -m https://www.myget.org/F/aspnetvnext
 RUN ["dnu", "restore"]
 EXPOSE 80
-ENTRYPOINT nohup dnx /app kestrel &
+ENTRYPOINT ["dnx","/app","kestrel"]
